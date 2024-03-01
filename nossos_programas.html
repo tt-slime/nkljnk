@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="functions.js"></script>
+    <title>SIEB</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>SIEB - SISTEMA INCLUSIVO DE<br>EDUCAÇÃO BENEFICENTE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="nossos_programas.html">Nossos programas</a></li>
+                <li><a href="novidades.html">Novidades</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Mais</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fórum</a>
+                        <a href="membros.html">Membros</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="#" id="login-link">
+                <img src="imagens/Usuario.png" alt="Fazer login">
+                Fazer login
+            </a>
+        </nav>
+    </header>
+
+    <div id="modal" class="modal" onclick="fecharModal(event)">
+        <div class="modal-content">
+            <h2 id="titulo_fazer_login">Fazer login</h2>
+            <span class="close" onclick="fecharModal(event)">&times;</span> <!-- Botão de fechar -->
+            <div id="input_login">
+                <input type="text" id="username" placeholder="Usuário">
+                <input type="password" id="password" placeholder="Senha">
+            </div>
+            <button id="botao_entrar" onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
+
+    <div id="div_da_imagem">
+        <id id="senac"><img src="imagens/Senac_logo.png" alt="Senac_logo">
+    </div>
+
+
+    <h1 id="nossos_serviços_titulo">Nossos Programas</h1>
+    <p id="nossos_serviços_paragrafo">O SIEB é um aplicativo que será utilizado tanto pela equipe de docentes quanto por
+        alunos com dificuldades no aprendizado, o aplicativo funcionará como um planner para os
+        docentes e como uma ferramenta de auxilio na aprendizagem dos alunos.</p>
+
+
+    <section id="servico1">
+        <div id="planejamento">
+            <img src="imagens/planejamento.jpg" alt="Serviço 1">
+        </div>
+
+        <h4>Planejamento de Aulas </h4>
+
+    </section>
+
+
+    <section id="servico2">
+        <div id="acesso">
+            <img src="imagens/acesso para alunos.jpg" alt="Serviço 2">
+        </div>
+
+        <h4>Acesso para alunos</h4>
+
+    </section>
+
+
+    <section id="servico3">
+        <div id="personalização">
+            <img src="imagens/personalização.png" alt="Serviço 3">
+        </div>
+
+        <h4>Personalização</h4>
+
+    </section>
+
+
+    <section id="servico4">
+        <div id="recursos">
+            <img src="imagens/recursos de acessibilidade.png" alt="Serviço 4">
+        </div>
+
+        <h4>Recursos de acessibilidade</h2>
+
+    </section>
+
+
+    <section id="servico5">
+        <div id="acompanhamento">
+            <img src="imagens/acompanhamento de progresso.jpg" alt="Serviço 5">
+        </div>
+
+        <h4>Acompanhamento de progresso</h4>
+
+    </section>
+
+
+    <h1 id="rodape_nossos">SIEB - SISTEMA INCLUSIVO DE EDUCAÇÃO BENEFICENTE<br>
+        <p>ajuda.sieb@gmail.com</p>
+    </h1>
+    <p id="copyright_nossos">&copy; 2024 Emilly Santos &bull; João Augustto &bull; Maria Eduarda &bull; Micael Rocha
+        &bull; Vitor Hugo. Todos os direitos reservados.</p>
+
+
+
+</body>
+
+<script src="popup_serviços.js"></script>
+
+</html>

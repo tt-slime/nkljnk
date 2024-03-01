@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="functions.js"></script>
+    <title>SIEB</title>
+</head>
+
+<body id="body_sobre">
+
+    <header>
+        <h1>SIEB - SISTEMA INCLUSIVO DE<br>EDUCAÇÃO BENEFICENTE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="nossos_programas.html">Nossos programas</a></li>
+                <li><a href="novidades.html">Novidades</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Mais</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fórum</a>
+                        <a href="membros.html">Membros</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="#" id="login-link">
+                <img src="imagens/Usuario.png" alt="Fazer login">
+                Fazer login
+            </a>
+        </nav>
+    </header>
+
+    <div id="faixa_sobre">
+        <a id="sobre_senac">
+            <img src="imagens\Senac_logo.png" alt="Logo Senac">
+        </a>
+    </div>
+
+    <div id="modal" class="modal" onclick="fecharModal(event)">
+        <div class="modal-content">
+            <h2 id="titulo_fazer_login">Fazer login</h2>
+            <span class="close" onclick="fecharModal(event)">&times;</span> <!-- Botão de fechar -->
+            <div id="input_login">
+                <input type="text" id="username" placeholder="Usuário">
+                <input type="password" id="password" placeholder="Senha">
+            </div>
+            <button id="botao_entrar" onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
+
+
+    <h1 id="sobre_senac_titulo"><br><br>Bem-vindo ao SIEB - Sistema Inclusivo de Educação Beneficente!</h1>
+
+    <p id="sobre_senac">É com grande satisfação que o recebe-mos em nossa plataforma dedicada à promoção da inclusão
+        educacional de pessoas com deficiências. Desenvolvido como um projeto em parceria com o Senac Minas, o SIEB visa
+        contribuir significativamente para o desenvolvimento de indivíduos com deficiências cognitivas e alguns tipos de
+        deficiências físicas no contexto educacional.</p>
+
+    <p id="sobre_senac_titulo">Missão do SIEB: Inclusão Educativa para Todos </p>
+    <p id="sobre_senac">
+        O coração do SIEB bate pela missão de tornar a educação acessível a todos, independentemente de suas habilidades
+        ou desafios. Reconhecemos a diversidade como um valor essencial, e estamos empenhados em criar um ambiente
+        educacional que celebre as diferenças e promova oportunidades iguais para todos os aprendizes.<br>
+        Recursos Adaptados para Todos:
+    </p>
+    <ul id="sobre_senac">
+        <li>Acessibilidade Física: Compreendemos as limitações físicas e implementamos recursos que facilitam a
+            interação e participação, assegurando que todos possam desfrutar plenamente do processo educacional.</li>
+        <li>Comunidade de Apoio: Criamos um espaço virtual que estimula a troca de experiências e apoio mútuo entre os
+            usuários, fortalecendo o sentimento de pertencimento em nossa comunidade inclusiva.</li>
+        <li>Acessibilidade Física: Compreendemos as limitações físicas e implementamos recursos que facilitam a
+            interação e participação, assegurando que todos possam desfrutar plenamente do processo educacional.</li>
+    </ul>
+    <p id="sobre_senac_titulo">Faça Parte da Transformação Educacional</p>
+    <p id="sobre_senac">
+        Ao explorar o SIEB, você está se unindo a nós na busca por uma educação verdadeiramente inclusiva. Nossa
+        plataforma não é apenas um recurso educacional, mas uma voz que clama por mudança, promovendo a conscientização
+        e incentivando práticas inclusivas em todos os níveis de ensino.<br>
+        Agradecemos por fazer parte desta jornada em direção a um futuro educacional mais igualitário e acessível para
+        todos. Seja bem-vindo ao SIEB - onde a inclusão é a chave para um aprendizado beneficente!
+    </p>
+
+    <h1 id="rodape_sobre">SIEB - SISTEMA INCLUSIVO DE EDUCAÇÃO BENEFICENTE<br>
+        <p>ajuda.sieb@gmail.com</p>
+    </h1>
+    <p id="copyright_sobre">&copy; 2024 Emilly Santos &bull; João Augustto &bull; Maria Eduarda &bull; Micael Rocha
+        &bull; Vitor Hugo. Todos os direitos reservados.</p>
+
+
+
+</body>
+
+</html>

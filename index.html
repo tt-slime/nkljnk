@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="functions.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SIEB</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>SIEB - SISTEMA INCLUSIVO DE<br>EDUCAÇÃO BENEFICENTE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="nossos_programas.html">Nossos programas</a></li>
+                <li><a href="novidades.html">Novidades</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Mais</a>
+                    <div class="dropdown-content">
+                        <a href="#">Fórum</a>
+                        <a href="membros.html">Membros</a>
+                        <a href="contato.html">Contato</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href="#" id="login-link">
+                <img src="imagens/Usuario.png" alt="Fazer login">
+                Fazer login
+            </a>
+        </nav>
+    </header>
+
+    <div id="modal" class="modal" onclick="fecharModal(event)">
+        <div class="modal-content">
+            <h2 id="titulo_fazer_login">Fazer login</h2>
+            <span id="close_login" class="close" onclick="fecharModal(event)">&times;</span> <!-- Botão de fechar -->
+            <div id="input_login">
+                <input type="text" id="username" placeholder="Usuário">
+                <input type="password" id="password" placeholder="Senha">
+            </div>
+            <button id="botao_entrar" onclick="fazerLogin()">Entrar</button>
+        </div>
+    </div>
+
+
+    <div id="faixa_inicial">
+        <a><img id="capa_inicial" src="imagens/capacitando.png" alt="Capacitando"></a>
+        <p id="capa_texto">Uma experiência de aprendizado única</p>
+    </div>
+
+    <div id="faixa_inicial2">
+        <h1 id="titulo_inicial">Saiba tudo sobre o SIEB</h1>
+        <p id="inicial_texto">Durante anos, a comunidade do SIEB educa alunos com necessidades especiais, assim como
+            habilidades e origens únicas. Nossa abordagem individualizada oferece apoio e facilita o aproveitamento de
+            oportunidades. Todo programa que o SIEB oferece melhora a vida e o futuro de nossos alunos, bem como de suas
+            famílias.</p>
+    </div>
+
+    <div id="carousel_inicial">
+        <div class="slide_inicial">
+            <img src="imagens/carrossel1.png" alt="Imagem 1">
+        </div>
+        <div class="slide_inicial">
+            <img src="imagens/carrossel2.png" alt="Imagem 2">
+        </div>
+        <div class="slide_inicial">
+            <img src="imagens/carrossel3.png" alt="Imagem 3">
+        </div>
+    </div>
+
+    <div id="faixa_inicial3">
+        <p id="depoimentos_inicial">Depoimentos dos nossos alunos</p>
+    </div>
+
+    <div class="container2">
+        <img id="teste1_inicial" src="imagens/teste1.png" alt="Teste1">
+        <p id="subteste1_inicial"> Estudantes do SIEB</p>
+        <img id="teste2_inicial" src="imagens/teste2.png" alt="Teste2">
+        <p id="subteste2_inicial"> Estudantes do SIEB</p>
+    </div>
+
+    <div>
+        <img id="imagem_frase_inicial" src="imagens/frase_inicial.png" alt="Louisa May Alcott"> 
+        <p id="texto_frase_inicial"> "Eu não tenho medo de tempestades, pois estou aprendendo a navegar no meu navio"<br> - Louisa May Alcott</p> 
+    </div>
+
+    <div id="nossos_contatos_inicial">
+        <p id="titulo_contatos_inicial">
+            Para obter mais detalhes entre em contato hoje mesmo.
+        </p>
+        <p id="numeros_inicial"> Emilly: (34) 999999999 <br>
+            Maria Eduarda: (34) 999999999 <br>
+            João Augustto (34) 999999999 <br>
+            Vitor (34) 999999999 <br>
+            Micael (34) 999999999 <br>
+        </p>
+    </div>
+
+    <h1 id="rodape_inicial">SIEB - SISTEMA INCLUSIVO DE EDUCAÇÃO BENEFICENTE<br>
+        <p>ajuda.sieb@gmail.com</p>
+    </h1>
+    <p id="copyright_inicial">&copy; 2024 Emilly Santos &bull; João Augustto &bull; Maria Eduarda &bull; Micael Rocha
+        &bull; Vitor Hugo. Todos os direitos reservados.</p>
+
+</body>
+
+</html>

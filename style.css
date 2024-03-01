@@ -1,0 +1,1652 @@
+/* Geral */
+
+/* Define a fonte 'Open Sans' e seu caminho de arquivo */
+@font-face {
+    font-family: 'Open Sans';
+    src: url('fontes/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    /* Ajuste o formato para 'truetype' e o caminho conforme necessário */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo para o pop-up fazer login */
+.modal {
+    display: none;
+    /* Inicialmente invisível */
+    position: fixed;
+    /* Fixa na tela */
+    z-index: 1;
+    /* Empilha na frente de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Cobrindo toda a largura da tela */
+    height: 100%;
+    /* Cobrindo toda a altura da tela */
+    overflow: auto;
+    /* Adiciona rolagem se o conteúdo exceder o tamanho da janela */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fundo semitransparente */
+}
+
+/* Estilo para o conteúdo do pop-up fazer login */
+.modal-content {
+    background-color: rgb(105, 0, 175);
+    /* Cor de fundo */
+    margin: 15% auto;
+    /* Margem centralizada verticalmente e 15% do topo */
+    height: 15vw;
+    /* Altura fixa */
+    border: 0.02vw solid #FBE94B;
+    /* Borda */
+    width: 25vw;
+    /* Largura fixa */
+    border-radius: 0.4vw;
+    /* Cantos arredondados */
+    position: relative;
+    /* Posição relativa */
+}
+
+/* Estilo para o título dentro do pop-up fazer loign */
+#titulo_fazer_login {
+    text-align: center;
+    /* Alinhamento central */
+    font-family: 'Open Sans';
+    /* Fonte 'Open Sans' */
+    font-size: 2.2vw;
+    /* Tamanho da fonte */
+    color: #FBE94B;
+    /* Cor do texto */
+}
+
+/* Estilo para o contêiner dos campos de login */
+#input_login {
+    display: flex;
+    /* Modelo flexível */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+/* Estilo para os campos de entrada dentro do contêiner de login */
+#input_login input {
+    margin: 0vw 0.5vw;
+    /* Espaço entre os inputs */
+    padding: 0.7vw;
+    /* Preenchimento interno */
+    width: 9.5vw;
+    /* Largura dos inputs */
+}
+
+/* Estilo para o botão de login */
+#botao_entrar {
+    display: block;
+    /* Bloco de nível */
+    margin: 1.5vw auto 0;
+    /* Margem superior e inferior auto para centralizar */
+    padding: 0.5vw 1vw;
+    /* Preenchimento */
+    color: rgb(105, 0, 175);
+    /* Cor do texto */
+    background-color: #FBE94B;
+    /* Cor de fundo */
+    border: none;
+    /* Sem borda */
+    border-radius: 0.3vw;
+    /* Cantos arredondados */
+    cursor: pointer;
+    /* Cursor ao passar */
+    font-weight: bold;
+    /* Peso da fonte */
+    font-size: 1vw;
+    /* Tamanho da fonte */
+}
+
+/* Estilo comum para os campos de usuário e senha */
+#username,
+#password {
+    border-radius: 5px;
+    /* Cantos arredondados */
+    border-style: none;
+
+}
+
+/* Estilo para o botão de fechar o pop-up fazer login */
+.close {
+    color: #fff;
+    /* Cor do texto */
+    cursor: pointer;
+    /* Cursor ao passar */
+}
+
+#close_login {
+    
+    position: absolute;
+    /* Posição absoluta */
+    top: 0vw;
+    /* Distância do topo */
+    right: 0.4vw;
+    /* Distância da direita */
+    font-size: 1.7vw;
+    /* Tamanho da fonte */
+}
+
+/* Estilo geral para o corpo da página */
+body {
+    font-family: 'Open Sans';
+    margin: 0;
+    /* Margem zero */
+    padding: 0;
+    /* Preenchimento zero */
+    background-color: rgb(105, 0, 175);
+    /* Cor de fundo */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: rgb(105, 0, 175);
+    /* Cor de fundo */
+    color: #fff;
+    /* Cor do texto */
+    padding: 1.5vw;
+    /* Preenchimento interno */
+    text-align: left;
+    /* Alinhamento do texto */
+}
+
+/* Estilo para o título de nível 1 */
+h1 {
+    font-size: 1.6vw;
+    /* Tamanho da fonte */
+    margin: 0;
+    /* Margem zero */
+}
+
+/* Estilo para a navegação */
+nav ul {
+    position: absolute;
+    /* Posição absoluta */
+    top: 1.8vw;
+    /* Distância do topo */
+    right: 1vw;
+    /* Distância da direita */
+    text-align: right;
+    /* Alinhamento do texto */
+    list-style-type: none;
+    /* Remove marcadores de lista */
+    margin: 0;
+    /* Margem zero */
+    padding: 0;
+    /* Preenchimento zero */
+}
+
+/* Estilo para os itens de lista na navegação */
+nav ul li {
+    display: inline-block;
+    /* Exibição em linha */
+
+}
+
+nav ul li a {
+    padding: 0 0.7vw;
+    /* Mantém o preenchimento ao redor do texto do link */
+    margin-right: 1vw;
+    font-size: 1vw;
+}
+
+
+/* Estilo para os links na navegação */
+nav a {
+    text-decoration: none;
+    /* Sem decoração de texto */
+    color: #fff;
+    /* Cor do texto */
+}
+
+/* Estilo para os itens de lista de navegação com dropdown */
+nav ul li.dropdown {
+    position: relative;
+    /* Posição relativa */
+    display: inline-block;
+    /* Exibição em bloco */
+}
+
+/* Estilo para o conteúdo do dropdown */
+nav .dropdown-content {
+    display: none;
+    /* Inicialmente oculto */
+    position: absolute;
+    /* Posição absoluta */
+    background-color: rgb(202, 153, 235);
+    /* Cor de fundo */
+    box-shadow: 0vw 0.4vw 0.6vw 0vw rgba(0, 0, 0, 0.2);
+    /* Sombra */
+    z-index: 1;
+    /* Empilhamento */
+    right: -1vw;
+}
+
+/* Estilo para os links no conteúdo do dropdown */
+nav .dropdown-content a {
+    color: #FBE94B;
+    /* Cor do texto */
+    padding: 0.5vw 1vw;
+    /* Preenchimento */
+    display: block;
+    /* Exibição em bloco */
+    text-decoration: none;
+    /* Sem decoração de texto */
+    text-align: center;
+    /* Alinhamento do texto */
+}
+
+/* Estilo para os links no conteúdo do dropdown quando hover */
+nav .dropdown-content a:hover {
+    background-color: rgb(73, 0, 122);
+    /* Cor de fundo ao passar o mouse */
+}
+
+/* Exibe o conteúdo do dropdown quando o item de lista é hover */
+nav li.dropdown:hover .dropdown-content {
+    display: block;
+    /* Exibe o conteúdo do dropdown */
+}
+
+/* Estilo para o link de login */
+#login-link {
+    position: absolute;
+    /* Posição absoluta */
+    right: 2.7vw;
+    /* Distância da direita */
+    text-decoration: none;
+    /* Sem decoração de texto */
+    color: #FBE94B;
+    /* Cor do texto */
+    top: 4.3vw;
+    font-size: 1vw;
+}
+
+/* Estilo para a imagem dentro do link de login */
+#login-link img {
+    width: 1.5vw;
+    /* Largura da imagem */
+    height: 1.5vw;
+    /* Altura da imagem */
+    vertical-align: middle;
+    /* Alinhamento vertical */
+}
+
+@media screen and (max-width: 768px) {
+
+
+
+    /* Estilo para o conteúdo do pop-up fazer login */
+    .modal-content {
+        margin: 15% auto;
+        /* Margem centralizada verticalmente e 15% do topo */
+        height: 25vw;
+        /* Altura fixa */
+        /* Largura fixa */
+        border-radius: 0.4vw;
+        /* Cantos arredondados */
+    }
+
+    /* Estilo para o título dentro do pop-up fazer loign */
+    #titulo_fazer_login {
+        font-size: 2.5vw;
+        /* Tamanho da fonte */
+    }
+
+    /* Estilo para os campos de entrada dentro do contêiner de login */
+    #input_login input {
+        margin: 2vw 0.5vw;
+        /* Espaço entre os inputs */
+        padding: 0.7vw;
+        /* Preenchimento interno */
+        width: 10vw;
+        /* Largura dos inputs */
+    }
+
+    /* Estilo para o botão de login */
+    #botao_entrar {
+        margin: 1.5vw auto 0;
+        /* Margem superior e inferior auto para centralizar */
+        padding: 0.5vw 1vw;
+        /* Preenchimento */
+        border-radius: 0.3vw;
+        /* Cantos arredondados */
+        font-size: 2vw;
+        /* Tamanho da fonte */
+    }
+
+    /* Estilo comum para os campos de usuário e senha */
+    #username,
+    #password {
+        border-radius: 5px;
+        /* Cantos arredondados */
+        border-style: none;
+
+    }
+
+    /* Estilo para o botão de fechar o pop-up fazer login */
+    .close {
+        color: #fff;
+        /* Cor do texto */
+        cursor: pointer;
+        /* Cursor ao passar */
+    }
+
+    #close_login {
+        
+        position: absolute;
+        /* Posição absoluta */
+        top: 0vw;
+        /* Distância do topo */
+        right: 0.4vw;
+        /* Distância da direita */
+        font-size: 1vw;
+        /* Tamanho da fonte */
+    }
+
+    /* Estilo geral para o corpo da página */
+    body {
+        font-family: 'Open Sans';
+        margin: 0;
+        /* Margem zero */
+        padding: 0;
+        /* Preenchimento zero */
+        background-color: rgb(105, 0, 175);
+        /* Cor de fundo */
+    }
+
+    /* Estilo para o cabeçalho */
+    header {
+        background-color: rgb(105, 0, 175);
+        /* Cor de fundo */
+        color: #fff;
+        /* Cor do texto */
+        padding: 1.5vw;
+        /* Preenchimento interno */
+        text-align: left;
+        /* Alinhamento do texto */
+    }
+
+    /* Estilo para o título de nível 1 */
+    h1 {
+        font-size: 1.6vw;
+        /* Tamanho da fonte */
+        margin: 0;
+        /* Margem zero */
+    }
+
+    /* Estilo para a navegação */
+    nav ul {
+        position: absolute;
+        /* Posição absoluta */
+        top: 1.8vw;
+        /* Distância do topo */
+        right: 1vw;
+        /* Distância da direita */
+        text-align: right;
+        /* Alinhamento do texto */
+        list-style-type: none;
+        /* Remove marcadores de lista */
+        margin: 0;
+        /* Margem zero */
+        padding: 0;
+        /* Preenchimento zero */
+    }
+
+    /* Estilo para os itens de lista na navegação */
+    nav ul li {
+        display: inline-block;
+        /* Exibição em linha */
+
+    }
+
+    nav ul li a {
+        padding: 0 0.7vw;
+        /* Mantém o preenchimento ao redor do texto do link */
+        margin-right: 1vw;
+        font-size: 1vw;
+    }
+
+
+    /* Estilo para os links na navegação */
+    nav a {
+        text-decoration: none;
+        /* Sem decoração de texto */
+        color: #fff;
+        /* Cor do texto */
+    }
+
+    /* Estilo para os itens de lista de navegação com dropdown */
+    nav ul li.dropdown {
+        position: relative;
+        /* Posição relativa */
+        display: inline-block;
+        /* Exibição em bloco */
+    }
+
+    /* Estilo para o conteúdo do dropdown */
+    nav .dropdown-content {
+        display: none;
+        /* Inicialmente oculto */
+        position: absolute;
+        /* Posição absoluta */
+        background-color: rgb(202, 153, 235);
+        /* Cor de fundo */
+        box-shadow: 0vw 0.4vw 0.6vw 0vw rgba(0, 0, 0, 0.2);
+        /* Sombra */
+        z-index: 1;
+        /* Empilhamento */
+        right: -1vw;
+    }
+
+    /* Estilo para os links no conteúdo do dropdown */
+    nav .dropdown-content a {
+        color: #FBE94B;
+        /* Cor do texto */
+        padding: 0.5vw 1vw;
+        /* Preenchimento */
+        display: block;
+        /* Exibição em bloco */
+        text-decoration: none;
+        /* Sem decoração de texto */
+        text-align: center;
+        /* Alinhamento do texto */
+    }
+
+    /* Estilo para os links no conteúdo do dropdown quando hover */
+    nav .dropdown-content a:hover {
+        background-color: rgb(73, 0, 122);
+        /* Cor de fundo ao passar o mouse */
+    }
+
+    /* Exibe o conteúdo do dropdown quando o item de lista é hover */
+    nav li.dropdown:hover .dropdown-content {
+        display: block;
+        /* Exibe o conteúdo do dropdown */
+    }
+
+    /* Estilo para o link de login */
+    #login-link {
+        position: absolute;
+        /* Posição absoluta */
+        right: 2.7vw;
+        /* Distância da direita */
+        text-decoration: none;
+        /* Sem decoração de texto */
+        color: #FBE94B;
+        /* Cor do texto */
+        top: 4.3vw;
+        font-size: 1vw;
+    }
+
+    /* Estilo para a imagem dentro do link de login */
+    #login-link img {
+        width: 1.5vw;
+        /* Largura da imagem */
+        height: 1.5vw;
+        /* Altura da imagem */
+        vertical-align: middle;
+        /* Alinhamento vertical */
+    }
+
+}
+
+/* Geral */
+
+
+
+/* Página Inicial */
+
+#capa_inicial {
+    width: 50vw;
+    height: 50vw;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -80px;
+}
+
+#capa_texto {
+    color: white;
+    font-size: 2vw;
+    font-family: 'Open Sans';
+    text-align: center;
+    position: relative;
+    top: -150px;
+}
+
+#faixa_inicial {
+    background-color: #A54EDF;
+    height: 95vh;
+    width: 100%;
+}
+
+#faixa_inicial2 {
+    background-color: #6900AF;
+    height: auto;
+    width: 100%;
+    padding: 40px 0;
+}
+
+#titulo_inicial {
+    color: white;
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 3.5vw;
+    margin-top: 40px;
+}
+
+#inicial_texto {
+    color: white;
+    font-size: 1.3vw;
+    font-family: 'Open Sans';
+    text-align: justify;
+    max-width: 90%;
+    /* Limita a largura máxima a 90% do contêiner pai */
+    margin-left: auto;
+    /* Margem à esquerda automática */
+    margin-right: auto;
+    /* Margem à direita automática */
+    padding: 0 5vw;
+    /* Adiciona preenchimento responsivo */
+    margin-bottom: -11vw;
+}
+
+#carousel_inicial {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: -12.4vw;
+}
+
+.slide_inicial {
+    display: none;
+}
+
+.slide_inicial img {
+    width: 100%;
+    height: auto;
+}
+
+#faixa_inicial3 {
+    background-color: #A54EDF;
+    height: 400px;
+    /* Ajuste conforme necessário */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#depoimentos_inicial {
+    font-family: 'Open Sans';
+    font-size: 3.5vw;
+    color: white;
+    font-weight: bold;
+}
+
+#teste1_inicial {
+    width: 50%;
+    height: auto;
+    /* Alterado para 'auto' para manter a proporção da imagem */
+    /* Adicionado para permitir que os elementos fiquem lado a lado */
+    vertical-align: middle;
+    /* Adicionado para alinhar verticalmente com o texto */
+}
+
+#teste2_inicial {
+    width: 50%;
+    height: auto;
+    /* Alterado para 'auto' para manter a proporção da imagem */
+    float: right;
+}
+
+.container2 {
+    height: auto;
+    padding: 0px 0;
+}
+
+#subteste1_inicial {
+    font-family: 'Open Sans';
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    /* Adicionado para permitir que os elementos fiquem lado a lado */
+    vertical-align: middle;
+    /* Adicionado para alinhar verticalmente com a imagem */
+    margin-left: 50px;
+}
+
+#subteste2_inicial {
+    font-family: 'Open Sans';
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: white;
+    text-align: right;
+    position: relative;
+    bottom: -220px;
+    right: 50px;
+}
+
+
+#imagem_frase_inicial {
+    width: 100%;
+    height: auto;
+}
+
+#texto_frase_inicial {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    top: -35vw;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 2vw;
+
+    background-color: rgba(0, 0, 0, 0.432);
+    padding: 1rem 2rem;
+    /* Adicionado preenchimento */
+}
+
+#nossos_contatos_inicial {
+    height: auto;
+    width: 100%;
+    background-color: #FBE94B;
+    position: relative;
+    top: -126px;
+    padding: 40px 0;
+    /* Adicionado preenchimento */
+}
+
+#titulo_contatos_inicial {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 3vw;
+    text-align: center;
+    color: #6900AF;
+}
+
+#numeros_inicial {
+    font-family: 'Open Sans';
+    font-size: 1.5vw;
+    text-align: center;
+    color: #6900AF;
+}
+
+#rodape_inicial {
+    margin-top: 5vw;
+    font-size: 1.5vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 2vw;
+    bottom: 0px;
+    top: -85px;
+}
+
+#copyright_inicial {
+    font-size: 1vw;
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    margin-bottom: 3vw;
+    top: -50px;
+}
+
+
+/* Página Inicial */
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+
+    #capa_inicial {
+        width: 50vw;
+        height: 50vw;
+        top: -4vw;
+    }
+    
+    #capa_texto {
+        font-size: 2vw;
+        top: -11vw;
+    }
+    
+    #faixa_inicial {
+        height: 72vh;
+        width: 100%;
+    }
+    
+    #faixa_inicial2 {
+        height: auto;
+        width: 100%;
+        padding: 2vw 0;
+    }
+    
+    #titulo_inicial {
+        font-size: 3.5vw;
+        margin-top: 1vw;
+    }
+    
+    #inicial_texto {
+        font-size: 1.6vw;
+        max-width: 90%;
+        /* Limita a largura máxima a 90% do contêiner pai */
+        margin-left: auto;
+        /* Margem à esquerda automática */
+        margin-right: auto;
+        /* Margem à direita automática */
+        padding: 0 5vw;
+        /* Adiciona preenchimento responsivo */
+        margin-bottom: -11vw;
+    }
+    
+    #carousel_inicial {
+        width: 100%;
+        height: auto;
+        margin-bottom: -12.5vw;
+    }
+    
+    .slide_inicial {
+        display: none;
+    }
+    
+    .slide_inicial img {
+        width: 100%;
+        height: auto;
+    }
+    
+    #faixa_inicial3 {
+        height: 20vw;
+        /* Ajuste conforme necessário */
+        width: 100%;
+    }
+    
+    #depoimentos_inicial {
+        font-size: 3.5vw;
+    }
+    
+    #teste1_inicial {
+        width: 50%;
+        height: auto;
+        /* Alterado para 'auto' para manter a proporção da imagem */
+    }
+    
+    #teste2_inicial {
+        width: 50%;
+        height: auto;
+    }
+    
+    .container2 {
+        height: auto;
+        padding: 0vw 0;
+    }
+    
+    #subteste1_inicial {
+        font-size: 3.5vw;
+        /* Adicionado para alinhar verticalmente com a imagem */
+        margin-left: 5vw;
+    }
+    
+    #subteste2_inicial {
+        font-size: 3.5vw;
+        bottom: -18vw;
+        right: 5vw;
+    }
+    
+    
+    #imagem_frase_inicial {
+        width: 100%;
+        height: auto;
+    }
+    
+    #texto_frase_inicial {
+        z-index: 1;
+        top: -35vw;
+        font-size: 2.5vw;
+        padding: 0rem 0rem;
+        /* Adicionado preenchimento */
+    }
+    
+    #nossos_contatos_inicial {
+        top: -13.5vw;
+        padding: 4vw 0;
+        /* Adicionado preenchimento */
+    }
+    
+    #titulo_contatos_inicial {
+        font-size: 3vw;
+    }
+    
+    #numeros_inicial {
+        font-size: 1.5vw;
+    }
+    
+    #rodape_inicial {
+        margin-top: 5vw;
+        font-size: 2.3vw;
+        margin-bottom: 2vw;
+        bottom: 0vw;
+        top: -8.5vw;
+    }
+    
+    #copyright_inicial {
+        font-size: 1vw;
+        bottom: 0vw;
+        margin-bottom: 3vw;
+        top: -9vw;
+    }
+    
+}
+
+
+/* Pagina sobre */
+
+#body_sobre {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(105, 0, 175);
+    margin-bottom: 5vw;
+}
+
+#sobre_senac {
+    text-align: justify;
+    font-family: 'Open Sans';
+    margin: auto;
+    margin-top: 2vw;
+    max-width: 70vw;
+    font-size: 1.5vw;
+    color: white;
+}
+
+#sobre_senac_titulo {
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 2.7vw;
+    color: white;
+    font-weight: bold;
+}
+
+#sobre_senac img {
+    width: 14vw;
+    height: 10vw;
+    display: block;
+    margin: auto;
+}
+
+#faixa_sobre {
+    width: 100%;
+    height: 14vw;
+    /* Ajuste a altura conforme necessário */
+    background-color: white;
+    /* Cor de fundo da faixa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rodape_sobre {
+    margin-top: 6vw;
+    font-size: 1.3vw;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0vw;
+}
+
+#copyright_sobre {
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0vw;
+    font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+
+    #body_sobre {
+        margin-bottom: 7vw;
+    }
+
+    #sobre_senac {
+        margin-top: 2vw;
+        max-width: 50vw;
+        font-size: 3vw;
+    }
+
+    #sobre_senac_titulo {
+        font-size: 2.7vw;
+    }
+
+    #sobre_senac img {
+        width: 17vw;
+        height: 13vw;
+    }
+
+    #faixa_sobre {
+        height: 17vw;
+        /* Ajuste a altura conforme necessário */
+    }
+
+    #rodape_sobre {
+        margin-top: 6vw;
+        font-size: 2.5vw;
+        bottom: 0vw;
+    }
+
+    #copyright_sobre {
+        font-size: 0.8vw;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    #body_sobre {
+        margin-bottom: 7vw;
+    }
+
+    #sobre_senac {
+        margin-top: 2vw;
+        max-width: 65vw;
+        font-size: 2.3vw;
+    }
+
+    #sobre_senac_titulo {
+        font-size: 2.5vw;
+    }
+
+    #sobre_senac img {
+        width: 17vw;
+        height: 13vw;
+    }
+
+    #faixa_sobre {
+        height: 17vw;
+        /* Ajuste a altura conforme necessário */
+    }
+
+    #rodape_sobre {
+        margin-top: 6vw;
+        font-size: 2.8vw;
+        bottom: 0vw;
+    }
+
+    #copyright_sobre {
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+
+    #body_sobre {
+        margin-bottom: 7vw;
+    }
+
+    #sobre_senac {
+        margin-top: 2vw;
+        max-width: 65vw;
+        font-size: 1.8vw;
+    }
+
+    #sobre_senac_titulo {
+        font-size: 2.5vw;
+    }
+
+    #sobre_senac img {
+        width: 17vw;
+        height: 13vw;
+    }
+
+    #faixa_sobre {
+        height: 17vw;
+        /* Ajuste a altura conforme necessário */
+    }
+
+    #rodape_sobre {
+        margin-top: 6vw;
+        font-size: 2.8vw;
+        bottom: 0vw;
+    }
+
+    #copyright_sobre {
+        font-size: 1.5vw;
+    }
+}
+
+/* Pagina sobre */
+
+/* Página contato */
+
+#body_contato {
+    margin-bottom: 70px;
+}
+
+#titulo_contato {
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 90px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#subtitulo_contato {
+    color: #FBE94B;
+    font-family: 'Open Sans';
+    font-size: 45px;
+    text-align: center;
+    margin-top: -5px;
+}
+
+#img_contato {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle;
+}
+
+#txt_contato {
+    text-align: justify;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    color: white;
+    vertical-align: middle;
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-bottom: 80px;
+}
+
+#txt_icon_contato {
+    text-align: left;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    color: white;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 38%;
+}
+
+#rodape_contato {
+    margin-top: 120px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 0px;
+}
+
+#copyright_contato {
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+}
+
+
+
+/* Página contato */
+
+/* Página Novidades */
+
+#foto_sieb img {
+    width: 50%;
+    height: 800px;
+    margin-right: 50%;
+}
+
+#novidades_sieb_titulo {
+    
+    font-family: 'Open Sans';
+    font-size: 40px;
+    max-width: 500px;
+    font-weight: bold;
+    color: white;
+    top: 200px;
+    right: 100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#novidades_sieb_subtitulo {
+    
+    font-family: 'Open Sans';
+    font-size: 35px;
+    top: 10px;
+    max-width: 300px;
+    color: white;
+    right: 100px;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 400px; 
+    
+}
+
+#novidades_sieb_subtitulo2 {
+    margin-right: 180px;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 100px;
+    top: 1150px;
+    color: #fff;
+
+}
+
+#novidades_sieb {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    text-align: justify;
+    position: absolute;
+    max-width: 800px;
+    right: 100px;
+    top: 1200px;
+    color:#fff
+    
+}
+
+#foto2_sieb img {
+    width: 50%;
+    height: 800px;
+    margin-left: 50%;
+    margin-top: -3px;
+}
+
+#novidades_sieb_subtitulo3 {
+    margin-left: 150px;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    left: 150px;
+    bottom: 1350px;
+    top: 1850px;
+    color: #fff;
+}
+
+#texto2_sieb {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    text-align: justify;
+    position: absolute;
+    max-width: 800px;
+    left: 100px;
+    bottom: 1000px;
+    top: 1900px;
+    color: #fff;
+}
+
+#foto3_sieb img {
+    width: 50%;
+    height: 800px;
+    margin-right: 50%;
+    margin-top: -4px;
+}
+
+#novidades_sieb_subtitulo4 {
+    margin-right: 150px;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    right: 250px;
+    bottom: 500px;
+    top: 2650px;
+    color: #fff;
+}
+
+#texto3_sieb {
+    font-family: 'Open Sans';
+    font-size: 20px;
+    text-align: justify;
+    position: absolute;
+    max-width: 800px;
+    right: 100px;
+    bottom: 200px;
+    top: 2700px;
+    color: #fff;
+}
+
+#rodape_novidades {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 150px;
+    top: 100px;
+}
+
+#copyright_novidades {
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 90px;
+    top: 100px;
+}
+
+/* Fim da Página Novidades */
+
+/* Pagina membros */
+
+#membros_titulo {
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 40px;
+    margin: 0 auto;
+    max-width: 800px;
+    font-weight: bold;
+    color: white;
+}
+
+#membros_subtitulo {
+    text-align: center;
+    font-family: 'Open Sans';
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+}
+
+#faixa_membros {
+    background-color: rgb(165, 78, 223);
+    position: relative;
+    top: 40px;
+    height: 800px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 300px;
+}
+
+#membros_subtitulo2 {
+    font-family: 'Open Sans';
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    top: 80px;
+    color: white;
+}
+
+#cadastro1_btn {
+    display: block;
+    background-color: #FBE94B;
+    color: rgb(105, 0, 175);
+    padding: 30px 40px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 130px;
+}
+
+#membros_subtitulo3 {
+    font-family: 'Open Sans';
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    top: 200px;
+    color: white;
+}
+
+#cadastro2_btn {
+    display: block;
+    background-color: #FBE94B;
+    color: rgb(105, 0, 175);
+    padding: 30px 40px;
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 250px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(105, 0, 175);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Open Sans';
+    border-radius: 5px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+button[type="submit"] {
+    background-color: rgb(165, 78, 223);
+    color: #FBE94B;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(105, 0, 175);
+}
+
+#rodape_membros {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 150px;
+}
+
+#copyright_membros {
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 90px;
+}
+
+/* Fim da Página Membros */
+
+/*NOSSOS SERVIÇOS*/
+
+
+
+#nossos_serviços_titulo {
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 70px;
+    margin-top: 100px;
+    color: #fff;
+
+}
+
+#senac img {
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+#div_da_imagem {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 160px;
+    background-color: #fff;
+    width: 100%;
+    /* Ajuste a largura conforme necessário */
+    height: 280px;
+    /* Ajuste a altura conforme necessário */
+    padding-top: 20px;
+    /* Ajuste o valor conforme necessário */
+    padding-bottom: 10px;
+    /* Ajuste o valor conforme você julgar necessário */
+}
+
+#nossos_serviços_paragrafo {
+    text-align: center;
+    font-family: 'Open Sans';
+    font-size: 35px;
+    margin-top: 50px;
+    color: #fff;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+
+
+#servico1,
+#servico2,
+#servico3,
+#servico4 {
+    float: left;
+    width: 48%;
+    margin-bottom: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 150px;
+    color: #fff;
+}
+
+#servico5 {
+
+    width: 48%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* Isso centraliza os elementos horizontalmente */
+    margin-top: 200px;
+    margin-bottom: 350px;
+    text-align: center;
+    float: none;
+    color: #fff;
+}
+
+
+
+#planejamento img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid rgb(243, 239, 14);
+    border-radius: 10px;
+
+}
+
+#acesso img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid rgb(243, 239, 14);
+    border-radius: 10px;
+
+}
+
+#personalização img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid rgb(243, 239, 14);
+    border-radius: 10px;
+}
+
+#recursos img {
+    width: 400px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    border: 5px solid rgb(243, 239, 14);
+    border-radius: 10px;
+}
+
+#acompanhamento img {
+    display: block;
+    margin: 0 auto;
+    /* Isso centraliza a imagem horizontalmente */
+    width: 400px;
+    height: 300px;
+    border: 5px solid rgb(243, 239, 14);
+    border-radius: 10px;
+    margin-top: 1300px;
+    margin-bottom: 40px;
+
+}
+
+#rodape_nossos {
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    position: relative;
+    bottom: 150px;
+}
+
+#copyright_nossos {
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 90px;
+}
+
+/*popup de serviços */
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/*NOSSOS SERVIÇOS*/
+
+/* Página de Equipe */
+
+#faixa {
+    background-color: white;
+    position: relative;
+    top: -100px;
+    height: 550px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 100px;
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.image-container {
+    display: inline-block;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.image-container img {
+    height: auto;
+}
+
+.image-container p {
+    margin: 10px;
+    text-align: center;
+    margin-right: 2%;
+    font-family: 'open sans';
+    font-size: 20px;
+}
+
+.foto_equipe img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#equipe {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Open Sans';
+    color: white;
+    position: relative;
+    bottom: 30px;
+}
+
+#linha_equipe {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 2px;
+}
+
+#copyright_equipe {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    bottom: 1px;
+}
+
+.rodape-equipe {
+    background-color: rgb(105, 0, 175);
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-bottom: 70px;
+    margin-top: -80px;
+}
+
+#texto_equipe {
+    color: #6900AF;
+    font-family: 'Open Sans';
+    font-size: 18px;
+}
+
+/* Fim da Página de Equipe */
